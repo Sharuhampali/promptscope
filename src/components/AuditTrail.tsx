@@ -51,6 +51,8 @@ export default function AuditTrail({ logs }: AuditTrailProps) {
     });
   }, [logs, searchTerm, statusFilter, threatFilter]);
 
+  const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
+
   const handleDownloadReport = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(logs, null, 2));
     const downloadAnchor = document.createElement('a');
@@ -59,6 +61,30 @@ export default function AuditTrail({ logs }: AuditTrailProps) {
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
+  };
+
+  const handleDownloadPDFReport = async () => {
+    try {
+      setIsDownloadingPDF(true);
+      const response = await fetch('/api/report');
+      if (!response.ok) {
+        throw new Error('Failed to generate PDF');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'PromptScope_Security_Report.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading PDF report:', error);
+      alert('Error downloading security PDF report. Please verify the API backend is available.');
+    } finally {
+      setIsDownloadingPDF(false);
+    }
   };
 
   return (
@@ -122,6 +148,16 @@ export default function AuditTrail({ logs }: AuditTrailProps) {
             >
               <Download className="w-3.5 h-3.5" />
               <span>Export Ledger</span>
+            </button>
+
+            {/* Download PDF Security Report Button */}
+            <button
+              onClick={handleDownloadPDFReport}
+              disabled={isDownloadingPDF}
+              className="ml-auto md:ml-0 px-3.5 py-1.5 rounded-lg border border-brand-border bg-brand-bg hover:border-brand-border-glow text-xs text-brand-text flex items-center gap-1.5 transition duration-150 hover:bg-brand-card disabled:opacity-50 cursor-pointer"
+            >
+              <FileText className="w-3.5 h-3.5 text-cyber-blue" />
+              <span>{isDownloadingPDF ? 'Generating...' : 'Security Spec PDF'}</span>
             </button>
           </div>
 
