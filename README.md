@@ -1,8 +1,19 @@
 # 🛡️ PromptScope
 
-### **Healthcare Pre-Inference Firewall Layer**
+<p>
+  <a href="https://github.com/Sharuhampali/promptscope">
+    <img src="https://img.shields.io/badge/🌐_Live_Demo-Try_it_now-brightgreen?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/Sharuhampali/promptscope">
+    <img src="https://img.shields.io/github/stars/Himani-Vasanth/trailtype?style=for-the-badge&color=yellow" alt="GitHub stars">
+  </a>
+</p>
+
+## **Healthcare Pre-Inference Firewall Layer**
 
 PromptScope is a state-of-the-art security, privacy, and policy enforcement gateway designed to safeguard clinical AI models. Positioned between healthcare applications and large language models (LLMs), PromptScope intercepts, analyzes, and sanitizes prompts in real time. It mitigates threats such as adversarial prompt injections, medical jailbreaks, Protected Health Information (PHI) leakage, and commercial/pharmaceutical diagnostic bias.
+
+## 🚀 **Want to see PromptScope in action?** [See what it catches →](https://promptscope-rho.vercel.app/)
 
 ---
 
