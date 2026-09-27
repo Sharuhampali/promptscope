@@ -13,7 +13,7 @@
 
 PromptScope is a state-of-the-art security, privacy, and policy enforcement gateway designed to safeguard clinical AI models. Positioned between healthcare applications and large language models (LLMs), PromptScope intercepts, analyzes, and sanitizes prompts in real time. It mitigates threats such as adversarial prompt injections, medical jailbreaks, Protected Health Information (PHI) leakage, and commercial/pharmaceutical diagnostic bias.
 
-## 🚀 **Want to see PromptScope in action?** [See what it catches →](https://promptscope-rho.vercel.app/)
+## 🚀 **Want to see PromptScope in action?** [Check PromptScope out here!](https://promptscope-rho.vercel.app/)
 
 ---
 
