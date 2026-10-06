@@ -131,3 +131,17 @@ To compile a production-ready optimized build:
 npm run build
 npm run start
 ```
+
+## 🏗️ Architecture & Security Flow
+
+### System Architecture
+
+![System Architecture](./system-architecture.png)
+
+### Security Pipeline
+
+![Security Pipeline](./security-pipeline.png)
+
+### Application Data Flow
+
+![Application Data Flow](./application-data-flow.png)
