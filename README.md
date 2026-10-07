@@ -145,3 +145,23 @@ npm run start
 ### Application Data Flow
 
 ![Application Data Flow](./application-data-flow.png)
+
+---
+
+## 📸 Project Screenshots
+
+### 🏠 Homepage
+
+![PromptScope Homepage](./picture_homepage.png)
+
+### 📊 Security Dashboard
+
+![PromptScope Dashboard](./picture_dashboard.png)
+
+### 🛡️ Policy Manager
+
+![PromptScope Policies](./picture_policies.png)
+
+### 📋 Audit Logs
+
+![PromptScope Audit Logs](./picture_audit_logs.png)
