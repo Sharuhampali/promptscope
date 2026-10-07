@@ -1,7 +1,7 @@
 # 🛡️ PromptScope
 
 <p>
-  <a href="https://github.com/Sharuhampali/promptscope">
+  <a href="https://promptscope-rho.vercel.app/">
     <img src="https://img.shields.io/badge/🌐_Live_Demo-Try_it_now-brightgreen?style=for-the-badge" alt="Live Demo">
   </a>
   <a href="https://promptscope-rho.vercel.app/">
